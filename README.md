@@ -1,15 +1,15 @@
-# News Text Classification (Course Lab)
+# News Topic Classification with an MLP
 
-Classifies Reuters newswires into 46 topics with a multilayer perceptron.
+> Sorting Reuters newswires into 46 topics with a regularized multilayer perceptron.
 
-**Context:** deep learning course lab. The notebook is based on code provided in the course, adapted from the Reuters example in *Deep Learning with Python* by François Chollet.
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?logo=tensorflow&logoColor=white) ![Keras](https://img.shields.io/badge/Keras-D00000?logo=keras&logoColor=white)
 
-## Model
-- Bag-of-words input (top 10,000 words, multi-hot encoded).
-- Dense 128 (ReLU, L2) → Dropout 0.5 → Dense 64 (ReLU, L2) → Dropout 0.3 → Dense 46 (softmax).
-- RMSprop, categorical cross-entropy, 30 epochs, 1,000 samples held out for validation.
+## Highlights
 
-## Result
-Validation accuracy of **78.6%** after 30 epochs.
+- Bag-of-words input over the 10,000 most frequent words.
+- Dense 128 → 64 → 46 with L2 regularization and dropout.
+- 78.6% validation accuracy after 30 epochs.
 
-**Tools:** Python · TensorFlow / Keras · NumPy · matplotlib
+## Credits
+
+Course lab. The code was provided by the course and is adapted from the Reuters example in *Deep Learning with Python* by François Chollet (chapter 4). This repository contains my run of it.
